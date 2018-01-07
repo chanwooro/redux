@@ -1,8 +1,9 @@
 const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
+    console.log(state);
       return [
-        ...state,
+        ...state,  // <--- this allows stacking object onto state
         {
           id: action.id,
           text: action.text,
